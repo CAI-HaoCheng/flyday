@@ -23,7 +23,7 @@ public class reviseAct extends HttpServlet {
         service = CommonUtil.getBean(getServletContext(), ActService.class);
 
     }
-
+//更新揪團資訊
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         final Act act = json2Pojo(req, Act.class);

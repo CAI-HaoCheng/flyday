@@ -29,7 +29,7 @@ public class PayActServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         doPost(req, resp);
     }
-
+// 付款完成後資料會回傳給後端更新
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 //        final Act_Join actJoin = json2Pojo(req, Act_Join.class);

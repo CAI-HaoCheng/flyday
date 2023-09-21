@@ -23,7 +23,7 @@ public class removeAct extends HttpServlet {
         service = CommonUtil.getBean(getServletContext(), ActService.class);
 
     }
-
+// 移除揪團資訊
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         final Integer id = json2Pojo(req, Act.class).getActno();

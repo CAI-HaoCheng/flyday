@@ -22,7 +22,7 @@ public class memActselect extends HttpServlet {
         service = CommonUtil.getBean(getServletContext(), ActService.class);
 
     }
-
+//查詢會員揪團資料
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         final Integer id = json2Pojo(req, Act.class).getMemno();

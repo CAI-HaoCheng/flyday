@@ -9,7 +9,7 @@ window.addEventListener("load", () => {
 
 })
 async function getAct(id) {
-    let datajoin = await fetch('joinmem', {
+    let datajoin = await fetch('joinmem', {// 此API在java controller的joinmem @WebServlet("/Act/joinonemem")                                                                     
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ memno: id })
@@ -31,7 +31,7 @@ async function getAct(id) {
 }
 
 
-function showmem(data) {
+function showmem(data) { // 展示團員列表
     let html = '';
 
     if (data.length == 0) {
@@ -133,10 +133,10 @@ function switchPage(e) {
     pagination(acts, page);
 }
 pageid.addEventListener('click', switchPage);
-function Check(actno) {
+function Check(actno) { // 跳到查看內容
     sessionStorage.setItem('actno', actno);
     location.href = `${getContextPath()}/Act/account-travelers.html`;
 }
-function getContextPath() {
+function getContextPath() { // 動態路徑
     return window.location.pathname.substring(0, window.location.pathname.indexOf('/', 2));
 }

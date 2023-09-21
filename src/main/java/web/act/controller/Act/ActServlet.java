@@ -23,11 +23,11 @@ public class ActServlet extends HttpServlet {
         service = CommonUtil.getBean(getServletContext(), ActService.class);
 
     }
-
+//新增揪團活動
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        Act act = json2Pojo(req, Act.class);
+        Act act = json2Pojo(req, Act.class);//取得前端JSON資料
 
         if (act == null) {
             act = new Act();

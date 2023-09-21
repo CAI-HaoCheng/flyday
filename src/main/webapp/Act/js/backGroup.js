@@ -12,6 +12,7 @@ $.ajax({
             data: data,
             //搜尋欄位是否開啟及設定
             searchDelay: 500,
+            //是否開啟滑動
             scrollX: '500px',
             autoWidth: false,
             paging: true,
@@ -32,7 +33,7 @@ $.ajax({
             // 欄位元素定義區塊(columnDefs)，依需求決定內容可加可不加。
             columnDefs: [
                 {
-                    //調整th:qaId欄位的寬度
+                    
                     targets: [0],
 
                 }, {
